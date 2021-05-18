@@ -1,4 +1,4 @@
-package model;
+package main.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -7,7 +7,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "meters")
-
 public class Meters {
 	@Id
 	@Column(name = "id")

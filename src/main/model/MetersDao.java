@@ -1,4 +1,4 @@
-package model;
+package main.model;
 
 import java.util.List;
 import org.hibernate.Session;
@@ -37,7 +37,7 @@ public class MetersDao implements MetersDaoInterface<Meters, String> {
 	}
 
 	private static SessionFactory getSessionFactory() {
-		Configuration configuration = new Configuration().configure("/resources/hibernate.cfg.xml");
+		Configuration configuration = new Configuration().configure();
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
